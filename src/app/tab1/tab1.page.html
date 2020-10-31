@@ -1,17 +1,78 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="color">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+
+    <ion-row>
+      <ion-col size="4">
+        <ion-title style="font-size: xx-large;"> Inicio </ion-title>
+      </ion-col>
+
+      <ion-col size="5">
+        <!-- Searchbar with cancel button shown on focus -->
+        <ion-searchbar showCancelButton="focus"></ion-searchbar>
+      </ion-col>
+
+      <ion-col size="3">
+
+        <ion-chip>
+            <ion-icon name="person-circle-outline"></ion-icon>
+          <ion-label>Nombre Usuario</ion-label>
+        </ion-chip>
+      </ion-col>
+    </ion-row>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+
+
+  <ion-row>
+  <ion-col size="12" style="align: center">
+    <ion-card color="dark">
+      <div align="center">
+      <ion-card-header>
+          <ion-img src="assets/img/Logo1.png" style=" width: 420px"></ion-img>
+          <br>
+      </ion-card-header>
+      <ion-card-content>
+        CONTROL Y REGISTRO DE INVENTARIOS EN EMPRESAS DE SERVICIO DE COMPUTO
+      </ion-card-content>
+      </div>
+    </ion-card>
+  </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="6">
+      <ion-card>
+        <ion-item href="#" class="ion-activated">
+          <ion-icon style=" font-size: 52px;" name="bag-check-outline"></ion-icon>
+          <ion-card-header>
+            <ion-card-title> Equipos para entrega</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            Se muestra una lista de los equipos que ya estan listos para el proceso de entrega
+          </ion-card-content>
+        </ion-item>
+      </ion-card>
+    </ion-col>
+
+    <ion-col size="6">
+      <ion-card>
+        <ion-item href="#" class="ion-activated">
+          <ion-icon style=" font-size: 52px;" name="construct-outline"></ion-icon>
+          <ion-card-header>
+            <ion-card-title>Equipos en reparación</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            Se muestra una lista de los equipos que aún estan en proceso de reparación
+          </ion-card-content>
+        </ion-item>
+      </ion-card>
+    </ion-col>
+
+  </ion-row>
 </ion-content>

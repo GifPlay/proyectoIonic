@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ContactoService } from '../../app/contacto.service';
 
 @Component({
   selector: 'app-tab3',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
-
+  public datos: any;
+  constructor(public contactoService: ContactoService) {
+    this.contactoService.contacto()
+        .then(data => {
+          this.datos = data;
+          console.log(this.datos);
+        });
+  }
 }
